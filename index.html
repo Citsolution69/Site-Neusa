@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Neusa Lina ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fff0f5, #e0f7fa);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #d81b60;
+      margin-top: 40px;
+      animation: fadeInDown 2s ease;
+    }
+
+    .carta {
+      max-width: 700px;
+      padding: 30px;
+      background: #ffffffcc;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      border-radius: 25px;
+      margin: 20px auto;
+      animation: fadeInUp 2.5s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .carta p {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 2;
+    }
+
+    .assinatura {
+      margin-top: 20px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .rosas {
+      margin: 40px 0;
+      animation: pulse 3s infinite;
+    }
+
+    .rosas img {
+      width: 180px;
+      transition: transform 0.6s ease;
+    }
+
+    .rosas img:hover {
+      transform: scale(1.1);
+    }
+
+    .petalas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .petala {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: url('https://img.freepik.com/psd-gratuitas/uma-linda-rosa-no-estudio_23-2151841273.jpg?ga=GA1.1.1308135266.1748878911&semt=ais_items_boosted&w=740') no-repeat center center;
+      background-size: contain;
+      animation: cair 8s linear infinite;
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes cair {
+      0% {
+        transform: translateY(-50px) rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .musica-texto {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #d81b60;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      .carta p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="petalas"></div>
+
+  <div class="container">
+    <h1>Para a minha amada Neusa Lina ❤️</h1>
+
+    <div class="carta">
+      <p>
+        Minha querida Neusa Lina, minha futura Tales...<br><br>
+        Quero que saibas o quanto te admiro profundamente. És uma mulher batalhadora, cheia de luz, força e determinação. A tua presença na minha vida tem sido uma bênção constante, um apoio firme nos dias bons e nos difíceis. <br><br>
+        És o meu botãozinho, o meu amor, a minha escolha certa. Tenho tanto orgulho de te ter ao meu lado e de sonhar contigo o nosso futuro. Obrigado por me inspirares todos os dias a ser um homem melhor. <br><br>
+        Amo-te com todo o meu coração. Esta é só uma pequena forma de te mostrar o quanto és especial para mim. 💖
+      </p>
+      <div class="assinatura">Com amor, Carlos Tales</div>
+    </div>
+
+    <div class="rosas">
+      <img src="https://img.freepik.com/psd-gratuitas/close-up-de-rosas-isoladas_23-2151805102.jpg?ga=GA1.1.1733055253.1745412449&semt=ais_items_boosted&w=740" alt="Buquê de Rosas Brancas">
+    </div>
+
+    <!-- Imagem extra visível -->
+    <div style="margin: 30px 0;">
+      <img src="" alt="Foto especial" style="width:220px; border-radius:18px; box-shadow:0 4px 20px #0002;">
+    </div>
+
+    <div class="musica-texto">
+      🔊 Dá som: "Sua Música Preferida"
+    </div>
+
+    <!-- Troque o src abaixo pelo link do som que você quer -->
+    <audio autoplay loop controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Teu navegador não suporta áudio.
+    </audio>
+  </div>
+
+  <script>
+    function criarPetalas(qtd) {
+      const area = document.querySelector('.petalas');
+      for (let i = 0; i < qtd; i++) {
+        const petala = document.createElement('div');
+        petala.classList.add('petala');
+        petala.style.left = Math.random() * 100 + 'vw';
+        petala.style.animationDuration = (5 + Math.random() * 5) + 's';
+        petala.style.animationDelay = Math.random() * 5 + 's';
+        area.appendChild(petala);
+      }
+    }
+    criarPetalas(30);
+  </script>
+</body>
+</html>
